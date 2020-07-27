@@ -1,0 +1,25 @@
+<%- include ('./partials/header') %>
+
+<div class="jumbotron jumbotron-fluid">
+	<div class="container text-center">
+    	<h1 class="">Simple <br> Movie Search</h1>
+    	<p class="lead">Results Page</p>
+	</div>
+</div>
+
+<div class='container'>
+	<ul>
+		<% data["Search"].forEach(function(movie){ %>
+		<li> 
+			<p class='mb-4'><%- movie['Title'] %>, first sceened in <%- movie['Year']%></p> 
+		</li>
+		<% }); %>	
+	</ul>
+<div class='text-center'>
+	<a class='btn btn-dark' href='/'>Search Again!</a>
+</div>
+	
+</div>
+
+<%- include ('./partials/footer') %>
+
